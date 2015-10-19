@@ -1,0 +1,38 @@
+<div class="jumbotron">
+
+<h1>{{vm.title}} - HTML5, Angularjs1.x, Bootstrap boilerplate</h1>
+    <p>
+        <span class="fa-stack fa-2x text-success">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+    </span>This is font-awesome font.
+    </p>
+    <p>
+        This is a boilerplateof HTML5, Angularjs1.x and Bootstrap3. If you can see this, means development is ready to use.
+    </p>
+    <p>
+        這是一個基本的HTML5, Angularjs1, Bootstrap3架構範本. 如果你有看到顯示的樣式是Bootstrap風格, 可以開始用這個架構來開發網站.
+    </p>
+    <a class="btn btn-primary btn-lg" href="404.html" role="button">Learn more</a></p>
+</div>
+
+<pre>
+    {{vm.collection | json}}
+</pre>
+
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr class="table-header-default">
+            <th class="col-xs-1">Id</th>
+            <th class="col-xs-3">Title</th>
+            <th class="col-xs-8">Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="deal in vm.collection" class="text-center text-base">
+            <td class="col-xs-1" ng-bind="deal.id"></td>
+            <td class="col-xs-3" ng-bind="deal.title"></td>
+            <td class="col-xs-8" ng-bind="deal.body"></td>
+        </tr>
+    </tbody>
+</table>
