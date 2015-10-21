@@ -1,0 +1,36 @@
+<div class="jumbotron">
+
+<h1>{{vm.title}} - HTML5, Angularjs1.x, Bootstrap boilerplate</h1>
+    <p>
+        <span class="fa-stack fa-2x text-success">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+    </span>This is font-awesome font.
+    </p>
+    <p>
+        This is a boilerplateof HTML5, Angularjs1.x and Bootstrap3. If you can see this, means development is ready to use.
+    </p>
+    <p>
+        Advanced AngularJS 1.x Example
+    </p>
+    <a class="btn btn-primary btn-lg" href="404.html" role="button">Learn more</a></p>
+</div>
+
+<button class="btn btn-primary btn-lg" role="button" ng-click="vm.onRefreshAll()">onRefreshAll</button></p>
+
+<div style="width: 800px;">
+    <div style="padding: 4px">
+        <div style="float: right;">
+            <input type="text" ng-model="gridOptions.quickFilterText" placeholder="Type text to filter..."/>
+        </div>
+        <div style="padding: 4px;">
+            <b>Employees Skills and Contact Details</b> ({{vm.rowCount}})
+        </div>
+        <div style="clear: both;"/>
+    </div>
+    <div style="width: 100%; height: 400px;"
+            ag-grid="vm.gridOptions"
+            class="ag-fresh ag-basic">
+    </div>
+</div>
+
