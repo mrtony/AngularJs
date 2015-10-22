@@ -30,6 +30,10 @@ angular.module("app", ["agGrid"]);
    
 * 如何新增資料而不蓋掉原資料?
 參考[Dynamically add rows to grid, but not refreshing](http://www.ag-grid.com/forum/showthread.php?tid=2339)和[calling onNewRows vs refreshView](http://www.ag-grid.com/forum/showthread.php?tid=2558), 作者說用`onNewRow()`可以新增row到原grid更完成refresh().
+
+* 為何在沒有資料時整個表格內容縮排了? <br/>
+要將`height`設為固定大小即可.
+
 ```
 function appendRow() {
     vm.gridOptions.rowData.push({make: "Audi", model: "Q5", price: 32000});
