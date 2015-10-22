@@ -14,7 +14,6 @@
         var vm = this;
         vm.title = 'Component2';
         vm.onRefreshAll = onRefreshAll;
-        vm.onUpdateMobile = onUpdateMobile;
 
         //-----------------------
         var firstNames = ["Sophie", "Isabelle", "Emily", "Olivia", "Lily", "Chloe", "Isabella",
