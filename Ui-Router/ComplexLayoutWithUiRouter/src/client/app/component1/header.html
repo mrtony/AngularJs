@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">富貴角1號</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li role="presentation" ui-sref-active="active"><a ui-sref="root.twindex.kline({twindex:rsViewProp.twindex, peri:rsViewProp.twindexKline.peri})"><span class="fa fa-bar-chart text-danger" aria-hidden="true"></span>報價</a></li>
+                <li role="presentation" ui-sref-active="active"><a ui-sref="root.stock.base.kline({id: rsViewProp.stockId, peri: rsViewProp.stockKline.peri})"><span class="fa fa-bar-chart text-danger" aria-hidden="true"></span>期權</a></li>
+                <li role="presentation" ui-sref-active="active"><a ui-sref="root.rank"><span class="fa fa-list-alt text-danger" aria-hidden="true"></span>資訊</a></li>
+                <li role="presentation" ui-sref-active="active"><a ui-sref="root.market.currency({symb: rsViewProp.marketCurrency.symb})"><span class="fa fa-area-chart text-danger" aria-hidden="true"></span>設定</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
