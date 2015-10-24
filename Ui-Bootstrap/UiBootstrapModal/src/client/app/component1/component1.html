@@ -1,0 +1,24 @@
+<div class="jumbotron">
+
+<h1>{{vm.title}}</h1>
+
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in vm.employees">
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.rating}}</div></td>
+            <td><button class="btn btn-xs btn-danger" ng-click="vm.promote(employee)">Promote</button></td>
+        </tr>
+    </tbody>
+</table>
