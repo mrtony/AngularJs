@@ -31,3 +31,45 @@ textarea {
 .container.contract-content {
     font-size: 1.2em;
 }
+
+.flashing-class {
+    color: red
+}
+
+/*
+ * Flash animation
+*/
+ 
+.flash {
+    /*width: 100px;
+    height: 100px;*/
+    /*background-color: red;*/
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: white;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: white;}
+}
+
+.error {
+    color: red;
+}
+
+.info {
+    color: green;
+}
+
+.error-block {
+    background-color: gray;
+}
