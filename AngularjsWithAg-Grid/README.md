@@ -189,9 +189,7 @@ function updateExistingRow() {
 
 ```
 gridOptions.api.refreshCells(updatedNodes, ['Name', 'Tel']);
-
-
-```�多個column
+```
 
 ---
 # 建立第一個grid
@@ -230,6 +228,7 @@ function updateExistingRow() {
 
 * 如何利用valueGetter利用表格中的數個值或數值加總後指派給另一個欄位?
 比如說股票`漲幅=(成交價-昨收價)/昨收價`, 那`漲幅`欄位不需要提供, 利用`valueGetter`可以做到.
+
 ```
 {headerName: "chg", valueGetter: computChgValueGetter}    
     
