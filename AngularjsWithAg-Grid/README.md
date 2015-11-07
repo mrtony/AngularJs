@@ -24,6 +24,33 @@ angular.module("app", ["agGrid"]);
 ---
 # 官方各功能說明
 
+## valueGetter
+valueGetter提供不同於cellRender等相關的方式來提供field的值, 而且更可以有更多的控制來計算field的值. 它可以有2種型式的運用：
+- Function: 傳入params, 可取得該row中的資料運算後傳回
+- Expression: 直接使用運算式
+
+### Expression
+它提供了幾個方式來直接取得數值:
+
+1. ctx: 使用context, 比如說`ctx.number`, 直接使用context中number的變數
+2. node：
+3. data: row的值?
+4. colDef:
+5. api:
+6. getValue: 可以直接取其他field的值。 
+
+使用getValue, `Times 10`的field, 直接使value field的值乘10
+```
+    var columnDefsLeft = [
+        {headerName: "Function", field: 'function', width: 150},
+        {headerName: "Value", field: 'value', width: 100},
+        {headerName: "Times 10", valueGetter: 'getValue("value") * 10', width: 100},
+    ];
+
+```
+
+valueGetter與cellRender很像。但valueGetter可以搭配context, 可以使用`getValue()`, (但不可以傳含樣式的值回去??)
+
 ## Cell Styleing
 共有4個不同的方式
 - cellClass
@@ -158,10 +185,16 @@ JS
 ```
 
 ## Refresh - 更新
-有三種更新方式
+有三更新方式及一種特殊方式
 - refreshView()
 - refreshRows()
 - refreshCells()
+- Volatile Cells, softRefreshView()
+
+其他
+- Cell Refresh from Inside
+- Refresh Headers and Footers
+- Headers, Footers and Cell Refresh Example
 
 ### refreshView()
 會更新整個整個grid. 舉例來說, 我們使用context的方式連結外部輸入, 當外部資料變更需要重新計算多個cell值時, 就需要用此函數做redraw, 以重新執行`cellRender`, `getRowClass`等功能去
@@ -190,6 +223,9 @@ function updateExistingRow() {
 ```
 gridOptions.api.refreshCells(updatedNodes, ['Name', 'Tel']);
 ```
+
+### Volatile Cells, softRefreshView()
+在column定義中使用`volatile: true`可以控制該column只會被`softRefreshView()`所控制, 不會被其他refresh所更新。這個功能方便我們手動去控制某些column的更新, 而不用因為其他預設的refresh行為影響。
 
 ---
 # 建立第一個grid
