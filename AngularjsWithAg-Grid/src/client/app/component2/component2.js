@@ -4,7 +4,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('app.component2')
         .controller('Component2', Component2);
 
     Component2.$inject = ['toastr']; 

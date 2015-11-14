@@ -15,7 +15,9 @@
         /*
          * Feature areas
          */
-        'app.component1'
+        'app.component1',
+        'app.component2',
+        'app.component3'
     ]);
     
     //for ui-router debug - optional, can be removed

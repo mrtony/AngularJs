@@ -3,6 +3,15 @@
 
 Ag-Grid是一個grid套件, 同時支援Pure Javascript, AngularJSx.1, AngularJS2.x and WebComponent.
 
+
+# 範例項目
+
+1. 基本grid : /home
+2. ag-grid提供的範例, /demo2
+3. 2個grid作新增, 移動, 刪除, /demo3
+
+
+---
 ### 加入ag-grid套件
 `bower install ag-grid --save-dev`
 

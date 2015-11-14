@@ -1,0 +1,23 @@
+<div class="jumbotron">
+
+<h1>Demo3</h1>
+    <a class="btn btn-primary btn-lg" href="404.html" role="button">Learn more</a></p>
+</div>
+
+<div class="row">
+    <div class="col-xs-5">
+    <input placeholder="請輸入關鍵字" type="text" ng-model="vm.leftGridOptions.quickFilterText"/>
+    <div ag-grid="vm.leftGridOptions" class="ag-dark" style="height: 800px;width:80%"></div>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.addRowtoRight()" ng-class="{'disabled': vm.focusPlace == 1}">新增個股</button></p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.moveItemUp()" ng-class="{'disabled': vm.focusPlace == 0}">往上移動</button></p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.moveItemDown()" ng-class="{'disabled': vm.focusPlace == 0}">往下移動</button></p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.deleteItem()" ng-class="{'disabled': vm.focusPlace == 0}">刪除個股</button></p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.deleteItems()" ng-class="{'disabled': vm.focusPlace == 0}">全部刪除</button></p>
+        <button class="btn btn-primary btn-lg" role="button" ng-click="vm.store()">儲存設定</button></p>        
+    </div>
+    <div class="col-xs-5">
+    <div ag-grid="vm.rightGridOptions" class="ag-dark" style="height: 800px;width:100%"></div>
+    </div>
+</div>

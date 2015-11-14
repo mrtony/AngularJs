@@ -58,6 +58,10 @@ var dataSource = {
 };
 
 $scope.gridOptions.api.setDatasource(dataSource);
-
-
 ```
+
+---
+# 論壇上的討論
+
+* [Customize or hide Pagination Panel](http://ag-grid.com/forum/showthread.php?tid=79&highlight=pagination+panel): 有看到如何使用css來客製他page navigation, 並有討論到自製pagination的方式。
+* [Change language of pagination](http://ag-grid.com/forum/showthread.php?tid=2752&highlight=pagination): 利用[ag-grid Internationalisation](http://www.ag-grid.com/angular-grid-internationalisation/index.php)來設定，並且有提到如何手動加入css來hide panel

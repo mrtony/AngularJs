@@ -4,7 +4,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('app.component1')
         .controller('Component1', Component1);
 
     Component1.$inject = ['toastr', 'fakeData']; 

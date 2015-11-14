@@ -1,16 +1,16 @@
 (function() {
 
     angular
-        .module('app.component2')
+        .module('app.component3')
         .config(['$stateProvider','$urlRouterProvider', function ($stateProvider,$urlRouterProvider) {
 			$urlRouterProvider.otherwise('/home');
 			
             $stateProvider
-                .state('demo2', {
-                    url:'/demo2',
-                    controller: 'Component2',
+                .state('demo3', {
+                    url:'/demo3',
+                    controller: 'Component3',
                     controllerAs: 'vm',
-                    templateUrl: 'app/component2/component2.html'
+                    templateUrl: 'app/component3/component3.html'
                 })
         }]);
 }());
