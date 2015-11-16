@@ -1,9 +1,85 @@
-angular.module('MyApp', [])
+angular.module('MyApp', []);
+
+angular.module('MyApp')
 .filter('reverse',[function(){
     return function(string){
         return string.split('').reverse().join('');
     }
 }])
+
+angular.module('MyApp')
+.factory('pki',[function() {
+    var pkis = {
+        query: {
+            cmd: 'Fetch',
+            params: {dwel: 5, _json: 1},
+            fields: ['idno', 'pass', 'dwel', '_json']
+        },
+        apply: {
+            cmd: 'Apply',
+            params: {_json: 1},
+            fields: ['idno', 'pass', 'email', '_json']
+        },
+        fetch: {
+            cmd: 'Fetch',
+            params: {_json: 1},
+            fields: ['idno', 'pass', '_json']
+        }
+    }
+    
+    var service = {
+        get pkis() {
+            return pkis;
+        }
+    };
+    
+    return service;
+}])
+
+angular.module('MyApp')
+.service('pki',[function() {
+    var self = this;
+    self.pkis = {
+        query: {
+            cmd: 'Fetch',
+            params: {dwel: 5, _json: 1},
+            fields: ['idno', 'pass', 'dwel', '_json']
+        },
+        apply: {
+            cmd: 'Apply',
+            params: {_json: 1},
+            fields: ['idno', 'pass', 'email', '_json']
+        },
+        fetch: {
+            cmd: 'Fetch',
+            params: {_json: 1},
+            fields: ['idno', 'pass', '_json']
+        }
+    }
+}])
+
+angular.module('MyApp')
+.service('pki',[function() {
+    var self = this;
+    self.pkis = {
+        query: {
+            cmd: 'Fetch',
+            params: {dwel: 5, _json: 1},
+            fields: ['idno', 'pass', 'dwel', '_json']
+        },
+        apply: {
+            cmd: 'Apply',
+            params: {_json: 1},
+            fields: ['idno', 'pass', 'email', '_json']
+        },
+        fetch: {
+            cmd: 'Fetch',
+            params: {_json: 1},
+            fields: ['idno', 'pass', '_json']
+        }
+    }
+}]);
+
 
 angular.module('calculatorApp', []);
 

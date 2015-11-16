@@ -76,3 +76,44 @@ var prettier = angular.mock.dump(vm);
         }); 
     });
 });
+
+
+//Factory
+//An Introduction To Unit Testing In AngularJS Applications-http://www.smashingmagazine.com/2014/10/introduction-to-unit-testing-in-angularjs/
+//Unit Testing AngularJS Services-http://jbavari.github.io/blog/2014/06/11/unit-testing-angularjs-services/
+describe('Factory', function(){ //describe your object type
+    beforeEach(angular.mock.module('MyApp'));
+    
+    var factory;
+    
+    beforeEach(angular.mock.inject(function(_pki_){
+      factory = _pki_;
+    }));
+    
+    describe('pkis', function () {
+        it('1 + 1 should equal 2', function () {
+            expect(factory.pkis.query.cmd).toEqual('Fetch');
+        }); 
+    });
+    
+});
+
+//service
+describe('Factory', function(){ //describe your object type
+    beforeEach(angular.mock.module('MyApp'));
+    
+    var service;
+    
+    beforeEach(angular.mock.inject(function(_pki_){
+      service = _pki_;
+    }));
+    
+    describe('pkis', function () {
+        it('query cmd should be Fetch', function () {
+            var prettier = angular.mock.dump(service);
+            console.log(prettier);
+            expect(service.pkis.query.cmd).toEqual('Fetch');
+        }); 
+    });
+    
+});

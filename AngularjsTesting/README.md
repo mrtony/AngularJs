@@ -11,17 +11,17 @@ Karma一定要裝在local, 然後用`./node_modules/karma/bin/karma start`來執
 * **安裝angularjs**
   - `npm install angular --save`
 * **安裝karma**
-  - `npm install -g karma --save-dev`
+  - `npm install karma --save-dev`
 * **安裝jasmine**
   - `npm install karma-jasmine jasmine-core --save-dev`
 * **安裝angular-mock**
-  - `npm install angular-mock --save-dev`
+  - `npm install angular-mocks --save-dev`
 * **安裝Phantomjs**
   - `npm install karma-phantomjs-launcher --save-dev`
 
 # 建立config檔 - karma.conf.js
 * 建立2個檔案夾：app, test
-* `karma init`
+* `./node_modules/karma/bin/karma init`
 * 選擇`jasmine`當成testing framework
 * 選擇`Phantomjs`當成browser
 * 選擇`app/*.js`, `test/*.js`為測試時要用的工作目錄
