@@ -1,0 +1,64 @@
+<div class="jumbotron">
+
+<h1>{{vm.title}} - HTML5, Angularjs1.x, Bootstrap boilerplate</h1>
+    <p>
+        <span class="fa-stack fa-2x text-success">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+    </span>This is font-awesome font.
+    </p>
+    <p>
+        This is a boilerplateof HTML5, Angularjs1.x and Bootstrap3. If you can see this, means development is ready to use.
+    </p>
+    <p>
+        這是一個基本的HTML5, Angularjs1, Bootstrap3架構範本. 如果你有看到顯示的樣式是Bootstrap風格, 可以開始用這個架構來開發網站.
+    </p>
+    <a class="btn btn-primary btn-lg" href="404.html" role="button">Learn more</a></p>
+</div>
+
+<!--select-objev is a object in controller-->
+<div angucomplete-alt id="ex1"
+  placeholder="Search countries"
+  maxlength="50"
+  pause="100"
+  selected-object="vm.selectedCountry"
+  local-data="vm.countries"
+  search-fields="name"
+  title-field="name,code"
+  minlength="1"
+  input-class="form-control form-control-small"
+  match-class="highlight"></div>
+
+<div angucomplete-alt id="ex2"
+  placeholder="Search contact"
+  maxlength="50"
+  pause="100"
+  selected-object="vm.selectedContact"
+  local-data="vm.contacts"
+  search-fields="Name,Country"
+  title-field="Name,Country"
+  minlength="1"
+  input-class="form-control form-control-small"
+  match-class="highlight"
+  text-no-results="找不到連絡人"
+  focus-first="true"></div>
+  
+<pre>
+    {{vm.selectedCountry | json}}
+</pre>
+<table class="table">
+<thead>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>body</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="user in vm.users">
+        <td>{{user.id}}</td>
+        <td>{{user.title}}</td>
+        <td>{{user.body}}</td>
+    </tr>
+</tbody>
+</table>
